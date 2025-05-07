@@ -21,6 +21,7 @@ export class PostsController {
   @Get()
   @HttpCode(HttpStatus.OK)
   async findAll(): Promise<PostEntity[]> {
+    console.log('Get all posts called...');
     return this.postsService.findAll();
   }
 
